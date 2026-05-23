@@ -5,6 +5,10 @@ body {
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
 }
+.max-width {
+  max-width: 1300px;
+  margin: 0 auto;
+}
 
 .site-header {
   display: grid;
@@ -14,17 +18,25 @@ body {
   justify-items: center;
   align-items: center;
 }
-.site-header::after {
+
+.disk {
   position: absolute;
-  content: "";
-  width: 220vw;
-  height: 240vh;
-  left: 80%;
+  left: 0;
+  top: -50%;
   z-index: -1;
-  transform: translateX(-50%);
-  border: 1px solid rgb(243, 240, 250);
-  border-radius: 50%;
-  background-color: rgb(251, 250, 255);
+  width: 100%;
+  height: 200vh;
+
+  background-image: radial-gradient(
+    circle at 62% -150%,
+    rgb(251, 250, 255) 0%,
+    rgb(251, 250, 255) 84%,
+    rgb(255, 255, 255) 84%,
+    rgb(255, 255, 255) 100%
+  );
+
+  background-repeat: no-repeat;
+  background-size: 110%;
 }
 .menu {
   display: flex;
@@ -171,13 +183,17 @@ body {
   align-items: center;
   justify-items: center;
 }
+.section-features {
+  background-color: rgb(251, 250, 255);
+  border: 2px solid rgb(246, 242, 252);
+}
 .features {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
-  border: 2px solid rgb(246, 242, 252);
-  padding: 60px 20px;
+
+  padding: 60px 0;
   background-color: rgb(251, 250, 255);
 }
 .features-img img {
@@ -249,13 +265,15 @@ body {
 .btn-benefits-more:hover {
   cursor: pointer;
 }
+.workflow-section {
+  border: 2px solid rgb(246, 242, 252);
+  background-color: rgb(251, 250, 255);
+}
 .workflow {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap-reverse;
-  padding: 60px;
-  border: 2px solid rgb(246, 242, 252);
-  background-color: rgb(251, 250, 255);
+  padding: 60px 0;
 }
 .workflow__content {
   display: flex;
@@ -484,7 +502,6 @@ body {
   }
   .footer_bottom_socials li {
     display: none;
-    
   }
 }
 
